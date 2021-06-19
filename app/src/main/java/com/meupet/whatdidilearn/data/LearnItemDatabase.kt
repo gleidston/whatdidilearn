@@ -1,6 +1,6 @@
 package com.meupet.whatdidilearn.data
 
-class LearnItemDatabase {
+object LearnItemDatabase {
     public fun getAll():List<LearnedItem>{
           return listOf(
                 LearnedItem(name = "Kotlin", description  = "Linguagem kotlin para Android", understandingLevel = UndestandingLevel.High),
