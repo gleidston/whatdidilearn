@@ -12,12 +12,12 @@ import com.meupet.whatdidilearn.data.LearnedItem
 class LearnItemAdapter : Adapter<LearnItemAdapter.LearnedItemViewHolder>() {
     inner class LearnedItemViewHolder(itemView:View):RecyclerView.ViewHolder(itemView) {
 
-        val titleContainer = itemView.findViewById<TextView>(R.id.textDes)
-        val title = itemView.findViewById<TextView>(R.id.textTitulo)
+        val titleContainer = itemView.findViewById<TextView>(R.id.textTitulo)
+        val title = itemView.findViewById<TextView>(R.id.textDes)
 
         fun bind(learnedItem: LearnedItem) {
         titleContainer.text =learnedItem.name
-            titleContainer.text =learnedItem.description
+            title.text =learnedItem.description
         }
     }
 
