@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">WhatDidILearn</string>
+    <string name="bt_nome">Jogar</string>
+    <string name="bt_cadastrar">Salvar</string>
+    <string name="lb_low">Baixo</string>
+    <string name="lb_medium">medio</string>
+    <string name="lb_high">Alto</string>
+    <string name="txt_lero">No entanto, não podemos esquecer que o acompanhamento das preferências de consumo aponta para a melhoria dos conhecimentos estratégicos para atingir a excelência.</string>
+    <string name="txt_desc">Descriçao</string>
+    <string name="txt_titulo">titulo</string>
+    <string name="whats">whats</string>
 </resources>

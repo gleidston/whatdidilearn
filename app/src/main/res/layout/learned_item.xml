@@ -8,13 +8,12 @@
 
     <View
         android:id="@+id/view"
-        android:layout_width="78dp"
-        android:layout_height="150dp"
-        android:layout_margin="6dp"
-        android:background="#827717"
-        app:layout_constraintTop_toTopOf="@+id/textTitulo"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp">
+        android:layout_width="25dp"
+        android:layout_height="0dp"
+        android:background="@color/amarelo"
+        app:layout_constraintBottom_toBottomOf="@+id/textDes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textTitulo">
 
 
     </View>
@@ -34,10 +33,10 @@
 
     <TextView
         android:id="@+id/textDes"
-        android:layout_margin="6dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="sggasgfsgfsgfasfgasgfasgasdgasdgasgagqsgfasgfasgasgasgfasgfasgagfagfag"
+        android:layout_margin="6dp"
+        android:text="@string/txt_lero"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/view"
