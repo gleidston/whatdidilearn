@@ -8,19 +8,20 @@
 
     <View
         android:id="@+id/view"
-        android:background="@color/cardview_shadow_start_color"
-        android:layout_margin="6sp"
         android:layout_width="78dp"
         android:layout_height="150dp"
+        android:layout_margin="6dp"
+        android:background="#827717"
+        app:layout_constraintTop_toTopOf="@+id/textTitulo"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="2dp">
+        tools:layout_editor_absoluteX="0dp">
 
 
     </View>
 
     <TextView
         android:id="@+id/textTitulo"
+        android:layout_margin="6dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="oi eu sou titulo"
@@ -33,6 +34,7 @@
 
     <TextView
         android:id="@+id/textDes"
+        android:layout_margin="6dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="sggasgfsgfsgfasfgasgfasgasdgasdgasgagqsgfasgfasgasgasgfasgfasgagfagfag"

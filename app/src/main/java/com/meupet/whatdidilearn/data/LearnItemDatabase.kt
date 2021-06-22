@@ -1,7 +1,41 @@
 package com.meupet.whatdidilearn.data
 
-object LearnItemDatabase {
-    public fun getAll():List<LearnedItem>{
+import android.content.Context
+import android.provider.CalendarContract
+import androidx.room.Database
+import androidx.room.Room
+import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
+
+@Database(entities = [LearnedItem::class],version = 1,exportSchema = false)
+@TypeConverters(Converters::class)
+
+abstract class LearnItemDatabase :RoomDatabase(){
+
+     abstract fun learnedItemDao ():LearnedItemDao
+     companion object{
+
+         @Volatile
+         var INSTANCE : LearnItemDatabase? = null
+
+         fun getDatabase(context: Context):LearnItemDatabase{
+             return INSTANCE ?: synchronized(this){
+
+                 val database = Room.databaseBuilder(context.applicationContext,LearnItemDatabase::class.java
+                 ,"learned_item_database").build()
+                 INSTANCE=database
+                 database
+             }
+         }
+
+
+
+     }
+
+
+
+
+     fun getAll():List<LearnedItem>{
           return listOf(
                 LearnedItem(name = "Kotlin", description  = "Linguagem kotlin para Android", understandingLevel = UndestandingLevel.High),
                 LearnedItem(name = "RecyclerView", description  = "Listas em Android", understandingLevel = UndestandingLevel.Medium),
