@@ -1,7 +1,7 @@
-package com.meupet.whatdidilearn.data
+package com.meupet.whatdidilearn.data.database
 
 import androidx.room.TypeConverter
-import com.meupet.whatdidilearn.R
+import com.meupet.whatdidilearn.entities.UndestandingLevel
 
 class Converters {
      @TypeConverter
@@ -11,7 +11,7 @@ class Converters {
      }
 
     @TypeConverter
-    fun intToLevel (int: Int):UndestandingLevel{
+    fun intToLevel (int: Int): UndestandingLevel {
         return when(int){
         UndestandingLevel.Low.ordinal-> UndestandingLevel.Low
             UndestandingLevel.Medium.ordinal-> UndestandingLevel.Medium

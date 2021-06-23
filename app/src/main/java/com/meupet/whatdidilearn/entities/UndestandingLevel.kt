@@ -1,4 +1,4 @@
-package com.meupet.whatdidilearn.data
+package com.meupet.whatdidilearn.entities
 
 import com.meupet.whatdidilearn.R
 

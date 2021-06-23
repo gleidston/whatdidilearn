@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.meupet.whatdidilearn.R
-import com.meupet.whatdidilearn.data.LearnedItem
+import com.meupet.whatdidilearn.entities.LearnedItem
 
 class LearnItemAdapter : Adapter<LearnItemAdapter.LearnedItemViewHolder>() {
     inner class LearnedItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -24,6 +24,12 @@ class LearnItemAdapter : Adapter<LearnItemAdapter.LearnedItemViewHolder>() {
     }
 
     var learnedItem = listOf<LearnedItem>()
+        set(value){
+            field =value
+           notifyDataSetChanged()
+        }
+
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LearnedItemViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val view = layoutInflater.inflate(R.layout.learned_item,parent,false)

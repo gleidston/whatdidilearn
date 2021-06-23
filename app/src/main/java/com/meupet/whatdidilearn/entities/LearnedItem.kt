@@ -1,8 +1,9 @@
-package com.meupet.whatdidilearn.data
+package com.meupet.whatdidilearn.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.meupet.whatdidilearn.entities.UndestandingLevel
 
 @Entity(tableName = "learned_item")
 data class LearnedItem(
@@ -14,7 +15,7 @@ data class LearnedItem(
     @ColumnInfo(name = "item_description")
     val description : String,
     @ColumnInfo(name = "item_level")
-    val understandingLevel:UndestandingLevel
+    val understandingLevel: UndestandingLevel
 
 
 )
