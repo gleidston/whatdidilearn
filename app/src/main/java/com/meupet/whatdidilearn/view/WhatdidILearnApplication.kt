@@ -7,9 +7,8 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 
 
-
 class WhatdidILearnApplication : Application() {
-   val database by lazy { LearnItemDatabase.getDatabase(this, CoroutineScope(Dispatchers.IO))}
+    val database by lazy { LearnItemDatabase.getDatabase(this, CoroutineScope(Dispatchers.IO)) }
 
     val repository by lazy {
 

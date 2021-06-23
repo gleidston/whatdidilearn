@@ -4,17 +4,17 @@ import androidx.room.TypeConverter
 import com.meupet.whatdidilearn.entities.UndestandingLevel
 
 class Converters {
-     @TypeConverter
-     fun levelToInt(level: UndestandingLevel):Int{
+    @TypeConverter
+    fun levelToInt(level: UndestandingLevel): Int {
 
-         return level.ordinal
-     }
+        return level.ordinal
+    }
 
     @TypeConverter
-    fun intToLevel (int: Int): UndestandingLevel {
-        return when(int){
-        UndestandingLevel.Low.ordinal-> UndestandingLevel.Low
-            UndestandingLevel.Medium.ordinal-> UndestandingLevel.Medium
+    fun intToLevel(int: Int): UndestandingLevel {
+        return when (int) {
+            UndestandingLevel.Low.ordinal -> UndestandingLevel.Low
+            UndestandingLevel.Medium.ordinal -> UndestandingLevel.Medium
 
 
             else -> UndestandingLevel.High

@@ -10,10 +10,12 @@ import com.meupet.whatdidilearn.entities.LearnedItem
 @Dao
 interface LearnedItemDao {
 
-     @Query("Select * From learned_item")
-    fun getAll(): LiveData<List <LearnedItem>>
-     @Insert
+    @Query("Select * From learned_item")
+    fun getAll(): LiveData<List<LearnedItem>>
+
+    @Insert
     fun insert(item: LearnedItem)
+
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     fun insert(learnedItems: List<LearnedItem>)
 

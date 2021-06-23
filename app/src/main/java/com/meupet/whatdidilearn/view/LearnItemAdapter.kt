@@ -14,7 +14,7 @@ class LearnItemAdapter : Adapter<LearnItemAdapter.LearnedItemViewHolder>() {
 
         val titleContainer = itemView.findViewById<TextView>(R.id.textTitulo)
         val title = itemView.findViewById<TextView>(R.id.textDes)
-        val cor =itemView.findViewById<View>(R.id.view)
+        val cor = itemView.findViewById<View>(R.id.view)
         fun bind(learnedItem: LearnedItem) {
             titleContainer.text = learnedItem.name
             title.text = learnedItem.description
@@ -24,21 +24,21 @@ class LearnItemAdapter : Adapter<LearnItemAdapter.LearnedItemViewHolder>() {
     }
 
     var learnedItem = listOf<LearnedItem>()
-        set(value){
-            field =value
-           notifyDataSetChanged()
+        set(value) {
+            field = value
+            notifyDataSetChanged()
         }
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LearnedItemViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
-        val view = layoutInflater.inflate(R.layout.learned_item,parent,false)
+        val view = layoutInflater.inflate(R.layout.learned_item, parent, false)
 
-         return  LearnedItemViewHolder(view)
+        return LearnedItemViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: LearnedItemViewHolder, position: Int) {
-        val learnedItem =learnedItem[position]
+        val learnedItem = learnedItem[position]
         holder.bind(learnedItem)
 
     }
