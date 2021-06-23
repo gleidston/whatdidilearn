@@ -4,11 +4,14 @@ package com.meupet.whatdidilearn
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.meupet.whatdidilearn.databinding.ActivityMainBinding
 import com.meupet.whatdidilearn.view.LearnItemAdapter
 import com.meupet.whatdidilearn.view.NewItemActivity
 import com.meupet.whatdidilearn.view.WhatdidILearnApplication
+import com.meupet.whatdidilearn.viewmodel.MainViewModel
+import com.meupet.whatdidilearn.viewmodel.ViewModelFactory
 
 
 class MainActivity : AppCompatActivity() {
@@ -25,9 +28,11 @@ class MainActivity : AppCompatActivity() {
         //adapter.learnedItem = LearnItemDatabase.getAll()
         recycler.adapter = adapter
         val repository = (application as WhatdidILearnApplication).repository
-        val items = repository.learnedItems
+        val viewModelFactory = ViewModelFactory(repository)
+        val viewModel = ViewModelProvider(this, viewModelFactory).get(MainViewModel::class.java)
+        val items = viewModel.learnedItems
         items.observe(this, androidx.lifecycle.Observer {
-           adapter.learnedItem=it
+            adapter.learnedItem = it
 
         })
 
