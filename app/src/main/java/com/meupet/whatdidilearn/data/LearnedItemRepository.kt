@@ -7,9 +7,9 @@ import com.meupet.whatdidilearn.entities.LearnedItem
 
 
 class LearnedItemRepository(private val dao: LearnedItemDao) {
- val learnedItems: LiveData<List<LearnedItem>> = dao.getAll()
- fun addNewItem(item: LearnedItem) {
-  dao.insert(item)
- }
+    val learnedItems: LiveData<List<LearnedItem>> = dao.getAll()
+    fun addNewItem(item: LearnedItem) {
+        dao.insert(item)
+    }
 
 }

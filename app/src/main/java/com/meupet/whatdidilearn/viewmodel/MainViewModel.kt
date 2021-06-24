@@ -7,5 +7,4 @@ import com.meupet.whatdidilearn.entities.LearnedItem
 
 class MainViewModel(private val repository: LearnedItemRepository) : ViewModel() {
     val learnedItems: LiveData<List<LearnedItem>> = repository.learnedItems
-
 }
